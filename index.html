@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tickets de Atención al Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Tickets</h1>
+        <form id="ticketForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="sector">Sector de Trabajo:</label>
+            <select id="sector" name="sector" required>
+                <option value="compras">Compras</option>
+                <option value="cadastro">Cadastro</option>
+                <option value="financiero">Financiero</option>
+                <option value="recursos_humanos">Recursos Humanos</option>
+                <option value="administracion">Administración</option>
+            </select>
+            <label for="issue">Descripción del problema:</label>
+            <textarea id="issue" name="issue" required></textarea>
+            <button type="submit">Generar Ticket</button>
+        </form>
+        <div id="ticketResult"></div>
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@latest/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("TvvW9-8-usrXmMxJ5"); // Reemplaza "YOUR_PUBLIC_KEY" con tu clave pública de EmailJS
+    })();
+</script>
+</script>
+</body>
+</html>
